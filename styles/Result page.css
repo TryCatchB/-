@@ -1,0 +1,54 @@
+.main {
+  padding-inline: 25px;
+}
+
+.questions-list_modify {
+  padding-top: 10px;
+}
+
+.learn-to-earn {
+  font-size: 18px;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.balance-info {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.coins_modify {
+  flex-direction: column;
+
+  & span {
+    font-size: 10px;
+  }
+}
+
+.coins-info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.button-back {
+  background: linear-gradient(to bottom, #ff9340, #ff7615);
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 25px;
+  cursor: pointer;
+  border: 2px solid var(--dark);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.question-button_green {
+  background: linear-gradient(to bottom, #1c661d, #215424);
+}

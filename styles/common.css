@@ -1,0 +1,332 @@
+:root {
+  --bolotny: #16212a;
+  --main-bg: #737373;
+  --dark: #000000;
+  --dark-pink: #231222;
+  --brown: #3d2812;
+}
+
+.container {
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--bolotny);
+  border-bottom: 5px solid var(--dark-pink);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 2px solid var(--dark);
+  border-right: 2px solid var(--dark);
+  border-top: 3px solid var(--dark);
+
+  .header__title {
+    font-size: 1rem;
+
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+  }
+
+  .header__menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 48px;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    & span {
+      display: block;
+      width: 4px;
+      height: 4px;
+      background-color: #888;
+      border-radius: 50%;
+      margin-block: 1px;
+    }
+  }
+
+  .header__close-icon {
+    position: relative;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background-color: #59636c;
+      border-radius: 1px;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.top-bar {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-block: 40px;
+
+  .buttons {
+    position: relative;
+    display: flex;
+
+    .how-it-works {
+      border: 1px solid #000;
+      border-radius: 3px;
+      padding: 5px 10px;
+      background: linear-gradient(to bottom, #fe8c23, #fc5a19);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.coins {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+
+  & img {
+    max-width: 40px;
+  }
+
+  .balance-coins {
+    font-size: 1.375rem;
+    color: #d7df3e;
+  }
+}
+
+.arrow img {
+  width: 20px;
+  height: 40px;
+}
+
+.close-button {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  max-width: 40px;
+}
+
+.questions-list {
+  padding: 50px 30px;
+  flex-direction: column;
+  background-color: #403f46;
+  border-radius: 5px;
+}
+
+.question-button {
+  padding: 6px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #ff9340, #ff7615);
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.question-button__link {
+  width: 100%;
+  display: flex;
+}
+
+.trophy-icon {
+  margin-right: 5px;
+
+  & img {
+    width: 50px;
+    height: 55px;
+  }
+}
+
+.question-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.875rem;
+
+  &:not(:last-child) {
+    margin-right: auto;
+  }
+}
+
+:is(.questions-list, .question-button) {
+  display: flex;
+  border: 2px solid var(--dark);
+}
+
+:is(.question-button, .question-button__link, .coin-count) {
+  align-items: center;
+}
+
+.coin-count {
+  display: flex;
+  font-size: 0.75rem;
+}
+
+.coin-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 15px solid var(--dark-pink);
+  font-size: 10px;
+  text-align: center;
+  padding-block: 10px;
+  background-color: var(--bolotny);
+  color: #6e7c87;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set default font size and line height for better text legibility */
+
+html {
+  font-size: 100%; /* 16px */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+/* Ensure body takes full height and uses a sans-serif font */
+body {
+  text-rendering: optimizeLegibility;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  background-color: #737373;
+  color: #fff;
+  overflow-y: auto;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default text decorations on links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set consistent appearance for images */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border: none;
+}
+
+/* Set consistent button styles */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Remove table spacing and borders */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Reset strong and bold elements */
+strong,
+b {
+  font-weight: bold;
+}
+
+/* Reset form elements' outline when focused */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Reset fieldset and legend spacing */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set default text alignment for easy styling */
+body,
+input,
+textarea,
+button,
+select,
+option {
+  text-align: left;
+}
+
+/* Adjust blockquote and figure margins for consistency */
+blockquote,
+figure {
+  margin: 0;
+}
