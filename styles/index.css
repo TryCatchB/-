@@ -6,34 +6,9 @@
   border-radius: 10px;
   padding-top: 20px;
   background-color: #5e5e5e;
-  margin-inline: 20px;
 }
 
 .list-page {
   padding-inline: 30px;
   padding-bottom: 20px;
-}
-
-.link {
-  background-color: #f58529;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-
-  & span {
-    font-size: 24px;
-    font-weight: bold;
-    background-color: #f58529;
-    color: #ffffff;
-    border-radius: 50%;
-    padding: 5px;
-    margin-right: 10px;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 10px;
-  }
 }

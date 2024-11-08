@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--dark-grey);
+}
+
+.leaderboard {
+  max-width: 100%;
+}
