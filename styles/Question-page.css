@@ -1,0 +1,21 @@
+.question {
+  position: relative;
+  text-align: center;
+  padding-block: 70px;
+  border-radius: 15px;
+  background-color: var(--dark-grey);
+
+  .question-title {
+    font-size: 1rem;
+    font-weight: inherit;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.answers {
+  max-width: 93%;
+  margin-inline: auto;
+}
